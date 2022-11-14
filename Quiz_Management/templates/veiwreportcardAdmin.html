@@ -1,0 +1,104 @@
+{% extends 'adminindex.html' %}
+{% load custom_tags %}
+{% load static %}
+{% block body %}
+<section id="main-content">
+    <section class="wrapper">
+        <div class="table-agile-info">
+            <div class="panel panel-default">
+
+                    <h5 align="center" style="padding:6px"> Online Quiz Report Card </h5><hr>
+                </div>
+                <div class="container" align="center">
+                        <table >
+                            <tr>
+                                <td>
+                                    <img src="{% static 'images/g3.jpg' %}" style="width:200px"/>
+                                </td>
+
+                                <td>
+                                    <table class="table" style="width:100px;padding:20px">
+                                        <tr>
+                                            <th style="color:black">Name</th>
+                                            <td style="color:black">{{data.user.first_name}} {{data.user.last_name}}</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th style="color:black">Email</th>
+                                            <td style="color:black">{{data.user.email}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th style="color:black">Branch</th>
+                                            <td style="color:black">{{data.branch_name.branch_name}}</td>
+                                        </tr>
+                                    </table>
+                                </td>
+
+
+                                <td>
+                                    <table class="table" style="width:200px;padding:30px">
+                                        <tr>
+                                            <th style="color:black">Obtain</th>
+                                            <td style="color:black">{{data.user|obtainmarks}}</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th style="color:black">Total</th>
+                                            <td style="color:black">{{data.user|totalmarks}}</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th style="color:black">Percentage</th>
+                                            <td style="color:black">{% getpercent data.user|totalmarks data.user|obtainmarks %} %
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+
+
+                                <td>
+                                    <img src="{% static 'images/g3.jpg' %}" style="width:200px"/>
+                                </td>
+                        </table>
+                        <table width="850" style="color:black;border:1px solid black">
+                            <thead>
+                            <tr style="color:black;border:1px solid black;background-color:grey">
+                                <th style="color:black;border:1px solid black">Course</th>
+                                <th style="color:black;border:1px solid black">Total Marks</th>
+                                <th style="color:black;border:1px solid black">Pass Marks</th>
+                                <th style="color:black;border:1px solid black">Obtain Marks</th>
+                            </tr>
+                            </thead>
+                            <tbody >
+                            {% for i in q %}
+                            <tr style="color:black;border:1px solid black">
+                                <td style="color:black;border:1px solid black">{{i.courses.courses_name}}</td>
+                                <td style="color:black;border:1px solid black">{{i.courses.total_marks}}</td>
+                                <td style="color:black;border:1px solid black">30%</td>
+                                <td style="color:black;border:1px solid black">{{i.marks}}</td>
+                            </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                     <button style="float:center;margin:4%;background-color:green;color:white" id="mid" onclick="printdiv()" s>Print</button>
+                    </a>
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+</section>
+
+<script>
+    function printdiv(){
+    document.getElementById('mid').style.display = 'none';
+        window.print();
+            document.getElementById('mid').style.display = 'block';
+    }
+
+</script>
+{% endblock %}

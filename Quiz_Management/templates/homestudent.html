@@ -1,0 +1,115 @@
+
+{% extends 'studentindex.html' %}
+{% load static %}
+{% block body %}
+<section id="main-content">
+	<section class="wrapper">
+		<!-- //market-->
+		<div class="market-updates">
+			<div class="col-md-3 market-update-gd">
+				<a href="/veiwTeacher"> <div class="market-update-block clr-block-2">
+					<div class="col-md-4 market-update-right">
+						<i class="fa fa-eye"> </i>
+					</div>
+					 <div class="col-md-8 market-update-left">
+					 <h4>Total Teacher</h4>
+					<h3>{{t}}</h3>
+					<p>Other hand, we denounce</p>
+				  </div>
+				  <div class="clearfix"> </div>
+				</div> </a>
+			</div>
+			<div class="col-md-3 market-update-gd">
+				<div class="market-update-block clr-block-1">
+					<div class="col-md-4 market-update-right">
+						<i class="fa fa-users" ></i>
+					</div>
+					<div class="col-md-8 market-update-left">
+					<h4>Total Student</h4>
+						<h3>{{ts}}</h3>
+						<p>Other hand, we denounce</p>
+					</div>
+				  <div class="clearfix"> </div>
+				</div>
+			</div>
+
+			<div class="col-md-3 market-update-gd">
+
+					<div class="market-update-block clr-block-3">
+					<div class="col-md-4 market-update-right">
+						<i class="fa fa-usd"></i>
+					</div>
+					<div class="col-md-8 market-update-left">
+						<h4>Total Courses</h4>
+						<h3>{{tc}}</h3>
+						<p>Other hand, we denounce</p>
+					</div>
+				  <div class="clearfix"> </div>
+				</div>
+
+			</div>
+
+			<div class="col-md-3 market-update-gd">
+				<a href="/veiwPendingTeacher"> <div class="market-update-block clr-block-4">
+					<div class="col-md-4 market-update-right">
+						<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+					</div>
+					<div class="col-md-8 market-update-left">
+						<h4>Pendding Teacher</h4>
+						<h3>{{pd}}</h3>
+						<p>Other hand, we denounce</p>
+					</div>
+				  <div class="clearfix"> </div>
+				</div> </a>
+			</div>
+		   <div class="clearfix"> </div>
+		</div>
+		<!-- //market-->
+
+		<div class="agil-info-calendar" style="margin-top:40%">
+		<!-- calendar -->
+		<div class="col-md-6 agile-calendar">
+			<div class="calendar-widget">
+                <div class="panel-heading ui-sortable-handle">
+					<span class="panel-icon">
+                      <i class="fa fa-calendar-o"></i>
+                    </span>
+                    <span class="panel-title"> Calendar Widget</span>
+                </div>
+				<!-- grids -->
+					<div class="agile-calendar-grid">
+						<div class="page">
+
+							<div class="w3l-calendar-left">
+								<div class="calendar-heading">
+
+								</div>
+								<div class="monthly" id="mycalendar"></div>
+							</div>
+
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+			</div>
+		</div>
+		<!-- //calendar -->
+
+		</div>
+			<!-- tasks -->
+		<div class="footer">
+			<div class="wthree-copyright">
+			  <p> Oct 2022 | Design by <a href="https://www.linkedin.com/in/priyanshu-sisodiya-b724a8213/" target="_blank">Priyanshu Sisodiya</a></p>
+			</div>
+ </div>
+</section>
+ <!-- footer -->
+		  <div class="footer">
+			<div class="wthree-copyright">
+			  <p>© 2017 Visitors. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+			</div>
+		  </div>
+  <!-- / footer -->
+</section>
+
+</section>
+{% endblock %}

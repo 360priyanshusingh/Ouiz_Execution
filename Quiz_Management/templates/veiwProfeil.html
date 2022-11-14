@@ -1,0 +1,85 @@
+{% extends 'studentindex.html' %}
+{% load static %}
+{% block body %}
+<section id="main-content">
+    <section class="wrapper">
+        <div class="table-agile-info">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Basic table
+                </div>
+                <div class="container">
+
+                    <div class="row" style="margin-left:5%;margin-right:5%;margin-top:3%">
+                        <div class="col-md-4" style="color:black">
+                            Student Name:
+                        </div>
+                        <div class="col-md-8">
+                            {{data.user.first_name}}{{data.user.last_name}}
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left:5%;margin-right:5%;margin-top:3%">
+                        <div class="col-md-4" style="color:black">
+                            Student Email:
+                        </div>
+                        <div class="col-md-8">
+                            {{data.user.email}}
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left:5%;margin-right:5%;margin-top:3%">
+                        <div class="col-md-4" style="color:black">
+                            Student Mobile:
+                        </div>
+                        <div class="col-md-8">
+                            {{data.mobile_number}}
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left:5%;margin-right:5%;margin-top:3%">
+                        <div class="col-md-4" style="color:black">
+                            Student Branch:
+                        </div>
+                        <div class="col-md-8">
+                            {{data.branch_name}}
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left:5%;margin-right:5%;margin-top:3%">
+                        <div class="col-md-4" style="color:black">
+                            Student Address:
+                        </div>
+                        <div class="col-md-8">
+                            {{data.address}}
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left:5%;margin-right:5%;margin-top:3%">
+                        <div class="col-md-4" style="color:black">
+                            Father Name:
+                        </div>
+                        <div class="col-md-8">
+                            {{data.father_name}}
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left:5%;margin-right:5%;margin-top:3%">
+                        <div class="col-md-4" style="color:black">
+                            Father Email:
+                        </div>
+                        <div class="col-md-8">
+                            {{data.father_email}}
+                        </div>
+                    </div>
+                    <div class="row"  style="margin-left:23%;margin-right:5%;margin-top:3%;margin-bottom:2%"> <a href="/updatedProfeil"> <button class="btn btn-success" style="float:center">Update</button></a>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="footer">
+			<div class="wthree-copyright">
+			  <p> Oct 2022 | Design by <a href="https://www.linkedin.com/in/priyanshu-sisodiya-b724a8213/" target="_blank">Priyanshu Sisodiya</a></p>
+			</div>
+ </div>
+    <!-- / footer -->
+</section>
+{% endblock %}

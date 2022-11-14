@@ -1,0 +1,105 @@
+{% extends 'teacherindex.html' %}
+{% load static %}
+{% block body %}
+<section id="main-content">
+    <section class="wrapper">
+        <div class="form-w3layouts">
+            <!-- page start-->
+            <!-- page start-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            Basic Forms
+                        </header>
+                        <div class="panel-body">
+                            <div class="position-center">
+                                <form role="form" action="" method="post">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <label >Courses</label>
+                                        <select class="form-control" name="bid" aria-label="Default select example" id="branch" onchange="branch_field()">
+                                            {% for i in e %}
+                                            <option value="{{i.id}}" {% if data.courses.id == i.id %}selected{% endif %}>{{i.courses_name}}
+                                            </option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>question</label>
+                                        <textarea class="form-control" name="qname" placeholder="question">  {{data.question_name}}</textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Marks</label>
+                                        <input type="number" class="form-control" name="m" value="{{data.marks}}" placeholder="mark">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>option1</label>
+                                        <input type="text" class="form-control" name="o1" value="{{data.option1}}" id="option-1"
+                                               >
+                                    </div>
+                                    <div class="form-group">
+                                        <label>option2</label>
+                                        <input type="text" class="form-control" name="o2" value="{{data.option2}}" id="option-2"
+                                               >
+                                    </div>
+                                    <div class="form-group">
+                                        <label>option3</label>
+                                        <input type="text" class="form-control" name="o3" value="{{data.option3}}" id="option-3"
+                                               >
+                                    </div>
+                                    <div class="form-group">
+                                        <label>option4</label>
+                                        <input type="text" class="form-control" name="o4" value="{{data.option4}}" id="option-4"
+                                               >
+                                    </div>
+                                    <button type="button" class="btn btn-primary" onclick="changeselect()">Load Answer</button>
+                                    <div class="form-group">
+                                        <label>Ans</label>
+                                        <select id="answer" class="form-control" name="ans" value="{{data.ans}}">
+                                            <option {% if data.option1 == data.ans %}selected{% endif %}>{{data.option1}}</option>
+                                            <option {% if data.option2 == data.ans %}selected{% endif %}>{{data.option2}}</option>
+                                            <option {% if data.option3 == data.ans %}selected{% endif %}>{{data.option3}}</option>
+                                            <option {% if data.option4 == data.ans %}selected{% endif %}>{{data.option4}}</option>
+                                        </select>
+                                        <span id="span1" style="color:green"></span>
+                                    </div>
+
+
+
+                                    <button type="submit" class="btn btn-info">Submit</button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+			<div class="wthree-copyright">
+			  <p> Oct 2022 | Design by <a href="https://www.linkedin.com/in/priyanshu-sisodiya-b724a8213/" target="_blank">Priyanshu Sisodiya</a></p>
+			</div>
+ </div>
+    </section>
+</section>
+<script>
+ function changespan(){
+   document.getElementById('span1').innerHTML='';
+ }
+
+  function changeselect(){
+  var mydata = "";
+    for(var i=1;i<=4;i++){
+        var val1 = document.getElementById('option-'+i).value;
+        mydata +=  `<option value="`+val1+`">`+val1+`</option>`;
+    }
+    document.getElementById('answer').innerHTML = mydata;
+    document.getElementById('span1').innerHTML = "Data Uploaded";
+    setTimeout(changespan, 2000);
+  }
+
+</script>
+{% endblock %}

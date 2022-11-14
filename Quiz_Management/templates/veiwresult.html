@@ -1,0 +1,63 @@
+{% extends 'studentindex.html' %}
+{% load static %}
+{% block body %}
+<section id="main-content">
+    <section class="wrapper">
+        <div class="table-agile-info">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Result
+                </div>
+                <div>
+                    <table class="table" ui-jq="footable" ui-options='{
+        "paging": {
+          "enabled": true
+        },
+        "filtering": {
+          "enabled": true
+        },
+        "sorting": {
+          "enabled": true
+        }}'>
+                        <thead>
+                        <tr>
+                            <th data-breakpoints="xs">ID</th>
+
+                            <th>Course Name</th>
+                            <th>Total Question</th>
+                            <th>Total Marks</th>
+                            <th>Obtain Marks</th>
+
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for i in e %}
+                        <tr>
+                            <th>{{forloop.counter}}</th>
+                            <th>{{i.courses.courses_name}}</th>
+                            <th>{{i.courses.total_question}}</th>
+                            <th>{{i.courses.total_marks }}</th>
+                            <th>{{i.marks }}</th>
+
+      </th>
+
+
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+   <div class="footer">
+			<div class="wthree-copyright">
+			  <p> Oct 2022 | Design by <a href="https://www.linkedin.com/in/priyanshu-sisodiya-b724a8213/" target="_blank">Priyanshu Sisodiya</a></p>
+			</div>
+ </div>
+    <!-- / footer -->
+</section>
+{% endblock %}

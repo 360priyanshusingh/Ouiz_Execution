@@ -1,0 +1,71 @@
+{% extends 'adminindex.html' %}
+{% load static %}
+{% block body %}
+<section id="main-content">
+    <section class="wrapper">
+        <div class="table-agile-info">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Student
+                </div>
+                <div>
+                    <table class="table" ui-jq="footable" ui-options='{
+        "paging": {
+          "enabled": true
+        },
+        "filtering": {
+          "enabled": true
+        },
+        "sorting": {
+          "enabled": true
+        }}'>
+                        <thead>
+                        <tr>
+                            <th data-breakpoints="xs">ID</th>
+                            <th>Student Branch </th>
+                            <th>Student Name</th>
+                            <th>Email ID</th>
+                            <th>Mobile Number</th>
+                            <th>address</th>
+                            <th>Profile Pic</th>
+                            <th>Score Card</th>
+
+
+                            <th>Delete</th>
+
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for i in e %}
+                        <tr>
+                            <th>{{forloop.counter}}</th>
+                            <th>{{i.branch_name.branch_name }}</th>
+                            <th>{{i.user.first_name}} {{i.user.last_name}}</th>
+                            <th>{{i.user.email}}</th>
+                            <th>{{i.mobile_number}}</th>
+                            <th>{{i.address }}</th>
+                            <td><img src="{{i.image.url}}" style="width:100px"/></td>
+                            <th><a href="/veiwreportcardAdmin/{{i.id}}"> <i class="fa fa-eye" style="font-size:20px;color:green;"></i></a> </td>
+                            <th><a href="/deleteStudent/{{i.id}}"  onclick="return confirm('Are you sure want to delete?')"> <i class="fa fa-trash" style="font-size:20px;color:red;"></i></a> </td>
+      </th>
+
+
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+   <div class="footer">
+			<div class="wthree-copyright">
+			  <p> Oct 2022 | Design by <a href="https://www.linkedin.com/in/priyanshu-sisodiya-b724a8213/" target="_blank">Priyanshu Sisodiya</a></p>
+			</div>
+ </div>
+    <!-- / footer -->
+</section>
+{% endblock %}

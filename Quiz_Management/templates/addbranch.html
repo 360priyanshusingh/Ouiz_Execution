@@ -1,0 +1,41 @@
+{% extends 'adminindex.html' %}
+{% load static %}
+{% block body %}
+<section id="main-content">
+	<section class="wrapper">
+	<div class="form-w3layouts">
+        <!-- page start-->
+        <!-- page start-->
+        <div class="row">
+            <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            Basic Forms
+                        </header>
+                        <div class="panel-body">
+                            <div class="position-center">
+                                <form role="form" action="" method="post">
+                                    {% csrf_token %}
+                                <div class="form-group">
+                                    <label >branch name</label>
+                                    <input type="text" class="form-control" name="bname" placeholder="Enter email">
+                                </div>
+
+                                <button type="submit" class="btn btn-info">Submit</button>
+                            </form>
+                            </div>
+
+                        </div>
+                    </section>
+
+            </div>
+        </div>
+    </div>
+     <div class="footer">
+			<div class="wthree-copyright">
+			  <p> Oct 2022 | Design by <a href="https://www.linkedin.com/in/priyanshu-sisodiya-b724a8213/" target="_blank">Priyanshu Sisodiya</a></p>
+			</div>
+ </div>
+    </section>
+</section>
+{% endblock %}

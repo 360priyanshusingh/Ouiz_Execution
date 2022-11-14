@@ -1,0 +1,50 @@
+{% extends 'adminindex.html' %}
+{% load static %}
+{% block body %}
+<section id="main-content">
+	<section class="wrapper">
+	<div class="form-w3layouts">
+        <!-- page start-->
+        <!-- page start-->
+        <div class="row">
+            <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            update status
+                        </header>
+                        <div class="panel-body">
+                            <div class="position-center">
+                                <form role="form" action="" method="post">
+                                    {% csrf_token %}
+                                <div class="form-group">
+                                        <label >Status</label>
+                                        <select class="form-control" name="status" aria-label="Default select example" id="status" onchange="branch_field()">
+
+                                            <option value="approved" > Approved </option>
+                                            <option value="reject" > Reject </option>
+
+                                        </select>
+                                    </div>
+                                <div class="form-group">
+                                    <label >Salary</label>
+                                    <input type="text" class="form-control" value="{{ data.salary }}" name="salary" >
+                                </div>
+
+                                <button type="submit" class="btn btn-info">Submit</button>
+                            </form>
+                            </div>
+
+                        </div>
+                    </section>
+
+            </div>
+        </div>
+    </div>
+        <div class="footer">
+			<div class="wthree-copyright">
+			  <p> Oct 2022 | Design by <a href="https://www.linkedin.com/in/priyanshu-sisodiya-b724a8213/" target="_blank">Priyanshu Sisodiya</a></p>
+			</div>
+ </div>
+    </section>
+</section>
+{% endblock %}

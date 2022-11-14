@@ -1,0 +1,113 @@
+{% extends 'studentindex.html' %}
+{% load static %}
+{% block body %}
+<section id="main-content">
+    <section class="wrapper">
+        <div class="table-agile-info">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                   Quiz
+                </div>
+                <span id="time">
+
+                </span>
+                <div class="container">
+                    <form method="post" action="">
+                        {% csrf_token %}
+                        {% for i in e %}
+
+                        <label>{{forloop.counter}}. {{i.question_name}}</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="option-{{i.id}}" value="{{i.option1}}">
+                            <label class="form-check-label">
+                                {{i.option1}}
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="option-{{i.id}}" value="{{i.option2}}">
+                            <label class="form-check-label">
+                                {{i.option2}}
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="option-{{i.id}}" value="{{i.option3}}">
+                            <label class="form-check-label">
+                                {{i.option3}}
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="option-{{i.id}}" value="{{i.option4}}">
+                            <label class="form-check-label">
+                                {{i.option4}}
+                            </label>
+                        </div>
+
+<br>
+                        {% endfor %}
+
+                        <div style="margin-top:15px;margin-bottom:15px">
+                            <input type="submit" id="submit-quiz" onclick="return confirm('Are you sure to submit this quiz.')"
+                                   class="btn btn-success" value="submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="footer">
+        <div class="wthree-copyright">
+            <p>© 2017 Visitors. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+        </div>
+    </div>
+    <!-- / footer -->
+</section>
+
+<script>
+     window.onbeforeunload = function() {
+          return "If you leave this page you will lose your unsaved changes.";
+     }
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date({{for_js}}).getTime();
+
+
+// Update the count down every 1 second
+    var x = setInterval(function() {
+
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+  //alert(distance);
+
+  // Time calculations for days, hours, minutes and seconds
+  //var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    hours = hours < 10 ? "0" + hours : hours;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+  // Output the result in an element with id="demo"
+  document.getElementById("time").innerHTML = hours + ":"
+  + minutes + ":" + seconds;
+
+  // If the count down is over, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("submit-quiz").style.display = "none";
+
+    document.getElementById("time").innerHTML = "EXPIRED";
+    $("#submit-quiz").trigger("click");
+  }
+}, 1000);
+</script>
+
+
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'adminindex.html' %}
+{% load static %}
+{% block body %}
+<section id="main-content">
+    <section class="wrapper">
+        <div class="table-agile-info">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Basic table
+                </div>
+                <div>
+                    <table class="table" ui-jq="footable" ui-options='{
+        "paging": {
+          "enabled": true
+        },
+        "filtering": {
+          "enabled": true
+        },
+        "sorting": {
+          "enabled": true
+        }}'>
+                        <thead>
+                        <tr>
+                            <th data-breakpoints="xs">ID</th>
+                            <th>Branch Name</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for i in e %}
+                        <tr>
+                            <th>{{forloop.counter}}</th>
+                            <th>{{i.branch_name}}</th>
+                            <th><a href="updatebranch/{{i.id}}"
+                                   > <i class="fa fa-edit"
+                                                                                                style="font-size:20px;color:gren;"></i></a>
+                            </td>
+
+                            <th><a href="deletebranch/{{i.id}}"
+                                   onclick="return confirm('Are you sure want to delete?')"> <i class="fa fa-trash"
+                                                                                                style="font-size:20px;color:red;"></i></a>
+                            </td>
+
+
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <div class="footer">
+			<div class="wthree-copyright">
+			  <p> Oct 2022 | Design by <a href="https://www.linkedin.com/in/priyanshu-sisodiya-b724a8213/" target="_blank">Priyanshu Sisodiya</a></p>
+			</div>
+ </div>
+    <!-- / footer -->
+</section>
+{% endblock %}

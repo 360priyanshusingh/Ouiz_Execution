@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Execution - </title>
+    <!-- google-fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- //google-fonts -->
+    <!-- Font-Awesome-Icons-CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome-all.min.css' %}">
+    <!-- Template CSS Style link -->
+    <link rel="stylesheet" href="{% static 'assets/css/style-starter.css' %}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <!--header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke">
+                <h1>
+                    <a class="navbar-brand d-flex align-items-center" href="index.html">
+                        <span class="lostyle-1">Quiz</span>
+                        execution
+                    </a>
+                </h1>
+                <!-- if logo is image enable this
+    <a class="navbar-brand" href="#index.html">
+        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+    </a> -->
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-lg-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                        <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+  Login
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+       <a href="/loginAdmin"><li><button class="dropdown-item" type="button">Admin Login</button></li>
+      <a href="/loginteacher"> <li><button class="dropdown-item" type="button">Teacher Login</button></li></a>
+           <a href="/loginstudent" <li><button class="dropdown-item" type="button">Student Login</button></li> </a>
+  </ul>
+</div>
+                        </li>
+                        <!-- search button -->
+                        <div class="search-right ml-lg-3">
+                            <form action="#search" method="GET" class="search-box position-relative">
+                                <div class="input-search">
+                                    <input type="search" placeholder="Enter Keyword" name="search" required="required"
+                                        autofocus="" class="search-popup">
+                                </div>
+                                <button type="submit" class="btn search-btn"><i class="fa fa-search"
+                                        aria-hidden="true"></i></button>
+                            </form>
+                        </div>
+                        <!-- //search button -->
+                    </ul>
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <div class="cont-ser-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+    <!--//header-->
+
+    <!-- banner section -->
+    <section class="banner-19">
+        <div class="banner-layer">
+            <video autoplay muted loop id="myVideo">
+                <source src="{% static 'assets/videos/video.mp4' %}" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <div class="main-content-top">
+                <div class="container">
+                    <div class="main-content">
+                        <!-- if logo is image enable this
+                        <a class="logo" href="index.html">
+                            <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+                        </a> -->
+                        <h4>Quiz Execution System is an online application</h4>
+                        <p class="mt-3"> from which user can easily manage Academic details, Performance details, Quiz details </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //banner section -->
+
+    <!-- banner bottom section -->
+    <section class="w3l-aboutblock py-5" id="about">
+        <div class="container py-md-5 py-sm-4">
+            <div class="row">
+                <div class="col-lg-6 left-wthree-img mb-lg-0 mb-4">
+                    <img class="img-fluid img-responsive" src="{% static 'assets/images/about.jpg' %}" alt=" ">
+                </div>
+                <div class="col-lg-6 about-right-faq align-self pl-lg-5">
+                    <h3 class="title-style"> Benefits of online quiz !</h3>
+                    <p class="mt-2">Here are some advantages of Online Quizzes. Taking online quizzes is becoming a huge success. But why is this such a huge success? What integrates people to use online quizzes instead of written quizzes? This article will tell you why this such a popular tool to use. And you may even want to do it yourself .</p>
+                    <div class="mt-4 pt-md-2">
+                        <div class="about-info-m d-flex">
+                            <div class="icon-style-ab mr-4">
+                                <i class="fas fa-donate"></i>
+                            </div>
+                            <div class="about-detail">
+                                <h4>Engage your audience</h4>
+                                <p>Engage your audience in a unique and fun way and connect them to your brand or learning material. By creating a returning event, you will improve your consumer loyalty.</p>
+                            </div>
+                        </div>
+                        <div class="about-info-m d-flex mt-4">
+                            <div class="icon-style-ab mr-4">
+                                <i class="fab fa-asymmetrik"></i>
+                            </div>
+                            <div class="about-detail">
+                                <h4>Randomizing questions</h4>
+                                <p>It is significant more easy to randomize your question with just one click than to do it all manually. Randomizing questions and even answers of those questions is not a lot a of work to do with online quizzes. Besides the advantage of time saving, it also helps preventing students from cheating.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //banner bottom section -->
+
+    <!-- logo brands section -->
+    <section class="w3l-brands" id="clients">
+        <div class="container pb-md-5 pb-4">
+            <div class="company-logos text-center pt-5 border-top-w3l">
+                <div class="row logos">
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <a href="#url"><img src="{% static 'assets/images/logo1.png' %}" alt="" class="img-fluid"></a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <a href="#url"><img src="{% static 'assets/images/logo2.png' %}" alt="" class="img-fluid"></a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 mt-sm-0 mt-4">
+                        <a href="#url"><img src="{% static 'assets/images/logo3.png' %}" alt="" class="img-fluid"></a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 mt-md-0 mt-4">
+                        <a href="#url"><img src="{% static 'assets/images/logo4.png' %}" alt="" class="img-fluid"></a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 mt-lg-0 mt-4">
+                        <a href="#url"> <img src="{% static 'assets/images/logo5.png' %}" alt="" class="img-fluid"></a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 mt-lg-0 mt-4">
+                        <a href="#url"> <img src="{% static 'assets/images/logo1.png' %}" alt="" class="img-fluid"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //logo brands section -->
+
+    <!-- services section -->
+    <div class="service-section py-5" id="services">
+        <div class="container py-md-5 py-4">
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6 section-heading">
+                    <h5 class="small-title-2">Web Services</h5>
+                    <h3 class="title-style-2">
+                        Our Best Services</h3>
+                </div>
+                <div class="col-md-6 section-heading mt-md-0 mt-2">
+                    <p>
+                        The introduction of online exam software replaced the conventional system of assessment.
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 item">
+                    <div class="card">
+                        <div class="card-header p-0 position-relative border-0">
+                            <a href="#services">
+                                <img class="d-block img-responsive" src="{% static 'assets/images/s4.jpg' %}" alt="card-image">
+                            </a>
+                        </div>
+                        <div class="card-body service-details">
+                            <span class="label-style">Work</span>
+                            <a href="#services" class="service-heading">Teacher panel</a>
+                            <p>teacher can login ,sign up add questions,update questions,view questins ,view student ,report card generations</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
+                    <div class="card">
+                        <div class="card-header p-0 position-relative border-0">
+                            <a href="#services">
+                                <img class="d-block img-responsive" src="{% static 'assets/images/s5.jpg' %}" alt="card-image">
+                            </a>
+                        </div>
+                        <div class="card-body service-details">
+                            <span class="label-style label-style-2">Business</span>
+                            <a href="#services" class="service-heading">Student penal</a>
+                            <p>student can login ,sign up , given quiz,view questions ,view result ,view report card.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-lg-0 mt-4">
+                    <div class="card">
+                        <div class="card-header p-0 position-relative border-0">
+                            <a href="#services">
+                                <img class="d-block img-responsive" src="{% static 'assets/images/s2.jpg' %}" alt="card-image">
+                            </a>
+                        </div>
+                        <div class="card-body service-details">
+                            <span class="label-style label-style-3">Corporate</span>
+<!--                              <span class="label-style label-style-3" class="service-heading"> admin panel </span>-->
+                            <a href="#services" class="service-heading">Admin panel</a>
+                            <p>admin can add questions , update questions , delete questions ,add teacher ,update teacher,assign couses,add branch.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //services section -->
+
+    <!-- about section -->
+    <div class="w3l-content-photo-5 py-5">
+        <div class="container py-lg-5 py-sm-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6 content-image order-lg-first order-last">
+                    <a href="#image"><img src="{% static 'assets/images/img2.jpg' %}" class="img-responsive" alt="content-photo"></a>
+                </div>
+                <div class="col-lg-6 col-md-10 mx-auto content-right mb-lg-0 mb-5 pl-lg-5 order-lg-last order-first">
+                    <h5 class="small-title-2">About the Company</h5>
+                    <h3 class="title-style-2">Creative Solutions</h3>
+                    <p class="my-3">What are the objectives of quiz?
+Quizzes help students identify what they know and what they don't know.</p>
+                    <p class="border-top-w3l pt-4 mt-4"> The students then have a better idea of how well they are grasping the material, hopefully motivating them to study more and helping them allocate their study time effectively by focusing on the information that still needs more practice.</p>
+
+                    <a href="#small-dialog" class="popup-with-zoom-anim d-flex align-items-center mt-md-5 mt-4">
+                        <span class="video-play-icon mr-3">
+                            <span class="far fa-play-circle"></span>
+                        </span>Watch Our <br>Video
+                    </a>
+
+                    <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+                    <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
+                        <iframe src="https://player.vimeo.com/video/86005700" frameborder="0"
+                            allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //about section -->
+
+    <!-- team section -->
+    <section class="w3l-team py-5">
+        <div class="container py-md-5 py-4">
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6 section-heading">
+                    <h5 class="small-title-2">Our Teammates </h5>
+                    <h3 class="title-style-2">Our Creative Team</h3>
+                </div>
+                <div class="col-md-6 section-heading mt-md-0 mt-2">
+                    <p>
+                      "Teamwork is the ability to work together toward a common vision. The ability to direct individual accomplishments toward organizational objectives. It is the fuel that allows common people to attain uncommon results."</p>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="team-block-single">
+                        <div class="team-grids">
+                            <a href="#team-single">
+                                <img src="{% static 'assets/images/team3.jpg' %}" class="img-fluid" alt="">
+                                <div class="team-info">
+                                    <div class="social-icons-section">
+                                        <a class="fac" href="#facebook">
+                                            <span class="fab fa-facebook-f"></span>
+                                        </a>
+                                        <a class="twitter mx-2" href="#twitter">
+                                            <span class="fab fa-twitter"></span>
+                                        </a>
+                                        <a class="google" href="#google-plus">
+                                            <span class="fab fa-google-plus-g"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="team-bottom-block p-4">
+                            <h5 class="member mb-1"><a href="#team">Olive Yew</a></h5>
+                            <small>Web Developer</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mt-sm-0 mt-4">
+                    <div class="team-block-single">
+                        <div class="team-grids">
+                            <a href="#team-single">
+                                <img src="{% static 'assets/images/team2.jpg' %}" class="img-fluid" alt="">
+                                <div class="team-info">
+                                    <div class="social-icons-section">
+                                        <a class="fac" href="#facebook">
+                                            <span class="fab fa-facebook-f"></span>
+                                        </a>
+                                        <a class="twitter mx-2" href="#twitter">
+                                            <span class="fab fa-twitter"></span>
+                                        </a>
+                                        <a class="google" href="#google-plus">
+                                            <span class="fab fa-google-plus-g"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="team-bottom-block p-4">
+                            <h5 class="member mb-1 active"><a href="#team">Aida Joe</a></h5>
+                            <small>Marketing Head</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mt-lg-0 mt-4">
+                    <div class="team-block-single">
+                        <div class="team-grids">
+                            <a href="#team-single">
+                                <img src="{% static 'assets/images/team4.jpg' %}" class="img-fluid" alt="">
+                                <div class="team-info">
+                                    <div class="social-icons-section">
+                                        <a class="fac" href="#facebook">
+                                            <span class="fab fa-facebook-f"></span>
+                                        </a>
+                                        <a class="twitter mx-2" href="#twitter">
+                                            <span class="fab fa-twitter"></span>
+                                        </a>
+                                        <a class="google" href="#google-plus">
+                                            <span class="fab fa-google-plus-g"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="team-bottom-block p-4">
+                            <h5 class="member mb-1"><a href="#team">Teri Dac</a></h5>
+                            <small>Sales Manager</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mt-lg-0 mt-4">
+                    <div class="team-block-single">
+                        <div class="team-grids">
+                            <a href="#team-single">
+                                <img src="{% static 'assets/images/team1.jpg' %}" class="img-fluid" alt="">
+                                <div class="team-info">
+                                    <div class="social-icons-section">
+                                        <a class="fac" href="#facebook">
+                                            <span class="fab fa-facebook-f"></span>
+                                        </a>
+                                        <a class="twitter mx-2" href="#twitter">
+                                            <span class="fab fa-twitter"></span>
+                                        </a>
+                                        <a class="google" href="#google-plus">
+                                            <span class="fab fa-google-plus-g"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="team-bottom-block p-4">
+                            <h5 class="member mb-1"><a href="#team">Anton Bne</a></h5>
+                            <small>Event Organizer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //team setion -->
+
+    <!-- content section -->
+    <section class="w3l-content-mid py-5">
+        <div class="container py-md-5 py-4">
+            <div class="welcome-left">
+                <h3 class="title-w3l">Friendships at school contribute towards a positive sense of mental wellbeing and help children learn social skills.</h3>
+                <p class="mt-3 text-white">
+ Icebreaker quizzes are a fun way to encourage students to get to know each other in the classroom or remotely.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- //content section -->
+
+    <!-- testimonials section -->
+<!--    <section class="w3l-clients py-5" id="testimonials">-->
+<!--        <div class="container py-md-5 py-4">-->
+<!--            <div class="row align-items-center mb-5">-->
+<!--                <div class="col-md-6 section-heading">-->
+<!--                    <h5 class="small-title-2">Oue students Testimonials</h5>-->
+<!--                    <h3 class="title-style-2">What student Say</h3>-->
+<!--                </div>-->
+<!--                <div class="col-md-6 section-heading mt-md-0 mt-2">-->
+<!--                    <p>-->
+<!--                        Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque,-->
+<!--                        eaque ipsa quae ab illo inventore.Sed ut perspiciatis unde omnis iste natus error sit.-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div id="owl-demo2" class="owl-carousel owl-theme pb-5">-->
+<!--                <div class="item">-->
+<!--                    <div class="testimonial-content">-->
+<!--                        <div class="testimonial">-->
+<!--                            <blockquote>-->
+<!--                                <q>Pellen tesque libero ut justo</q>-->
+<!--                            </blockquote>-->
+<!--                            <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in-->
+<!--                                faucibus orci luctus.</p>-->
+<!--                        </div>-->
+<!--                        <div class="bottom-info mt-4">-->
+<!--                            <a class="comment-img" href="#url"><img src="{% static 'assets/images/testi1.jpg' %}"-->
+<!--                                    class="img-responsive" alt="placeholder image"></a>-->
+<!--                            <div class="people-info align-self">-->
+<!--                                <h3>Johnson william</h3>-->
+<!--                                <p class="identity">Example City</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="item">-->
+<!--                    <div class="testimonial-content">-->
+<!--                        <div class="testimonial">-->
+<!--                            <blockquote>-->
+<!--                                <q>Lorem ipsum dolor sit amet</q>-->
+<!--                            </blockquote>-->
+<!--                            <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in-->
+<!--                                faucibus orci luctus.</p>-->
+<!--                        </div>-->
+<!--                        <div class="bottom-info mt-4">-->
+<!--                            <a class="comment-img" href="#url"><img src="{% static 'assets/images/testi2.jpg' %}"-->
+<!--                                    class="img-responsive" alt="placeholder image"></a>-->
+<!--                            <div class="people-info align-self">-->
+<!--                                <h3>Alexander sakura</h3>-->
+<!--                                <p class="identity">Example City</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="item">-->
+<!--                    <div class="testimonial-content">-->
+<!--                        <div class="testimonial">-->
+<!--                            <blockquote>-->
+<!--                                <q>Pellen tesque libero ut justo</q>-->
+<!--                            </blockquote>-->
+<!--                            <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in-->
+<!--                                faucibus orci luctus.</p>-->
+<!--                        </div>-->
+<!--                        <div class="bottom-info mt-4">-->
+<!--                            <a class="comment-img" href="#url"><img src="{% static 'assets/images/testi3.jpg' %}"-->
+<!--                                    class="img-responsive" alt="placeholder image"></a>-->
+<!--                            <div class="people-info align-self">-->
+<!--                                <h3>John wilson</h3>-->
+<!--                                <p class="identity">Example City</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="item">-->
+<!--                    <div class="testimonial-content">-->
+<!--                        <div class="testimonial">-->
+<!--                            <blockquote>-->
+<!--                                <q>Lorem ipsum dolor sit amet</q>-->
+<!--                            </blockquote>-->
+<!--                            <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in-->
+<!--                                faucibus orci luctus.</p>-->
+<!--                        </div>-->
+<!--                        <div class="bottom-info mt-4">-->
+<!--                            <a class="comment-img" href="#url"><img src="{% static 'assets/images/testi3.jpg' %}"-->
+<!--                                    class="img-responsive" alt="placeholder image"></a>-->
+<!--                            <div class="people-info align-self">-->
+<!--                                <h3>Julia sakura</h3>-->
+<!--                                <p class="identity">Example City</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="item">-->
+<!--                    <div class="testimonial-content">-->
+<!--                        <div class="testimonial">-->
+<!--                            <blockquote>-->
+<!--                                <q>Pellen tesque libero ut justo</q>-->
+<!--                            </blockquote>-->
+<!--                            <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in-->
+<!--                                faucibus orci luctus.</p>-->
+<!--                        </div>-->
+<!--                        <div class="bottom-info mt-4">-->
+<!--                            <a class="comment-img" href="#url"><img src="{% static 'assets/images/testi1.jpg' %}"-->
+<!--                                    class="img-responsive" alt="placeholder image"></a>-->
+<!--                            <div class="people-info align-self">-->
+<!--                                <h3>John wilson</h3>-->
+<!--                                <p class="identity">Example City</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="item">-->
+<!--                    <div class="testimonial-content">-->
+<!--                        <div class="testimonial">-->
+<!--                            <blockquote>-->
+<!--                                <q>Lorem ipsum dolor sit amet.</q>-->
+<!--                            </blockquote>-->
+<!--                            <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in-->
+<!--                                faucibus orci luctus.</p>-->
+<!--                        </div>-->
+<!--                        <div class="bottom-info mt-4">-->
+<!--                            <a class="comment-img" href="#url"><img src="{% static 'assets/images/testi2.jpg' %}"-->
+<!--                                    class="img-responsive" alt="placeholder image"></a>-->
+<!--                            <div class="people-info align-self">-->
+<!--                                <h3>Julia sakura</h3>-->
+<!--                                <p class="identity">Example City</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+    <!-- //testimonials section -->
+
+    <!-- blog section -->
+    <div class="w3l-homeblock2 py-5">
+<!--        <div class="container py-md-5 py-4">-->
+<!--            <div class="row align-items-center mb-5">-->
+<!--                <div class="col-md-6 section-heading">-->
+<!--                    <h5 class="small-title-2">Our News & Articles</h5>-->
+<!--                    <h3 class="title-style-2">Latest Blog Posts</h3>-->
+<!--                </div>-->
+<!--                <div class="col-md-6 section-heading mt-md-0 mt-2">-->
+<!--                    <p>-->
+<!--                        Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque,-->
+<!--                        eaque ipsa quae ab illo inventore.Sed ut perspiciatis unde omnis iste natus error sit.-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="row">-->
+<!--                <div class="col-lg-6">-->
+<!--                    <div class="bg-clr-white hover-box">-->
+<!--                        <div class="row align-items-center">-->
+<!--                            <div class="col-sm-6 position-relative">-->
+<!--                                <a href="#blog">-->
+<!--                                    <img class="img-fluid d-block" src="{% static 'assets/images/blog3.jpg' %}" alt="image">-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-6">-->
+<!--                                <div class="card-body blog-details align-self pl-sm-0">-->
+<!--                                    <a href="#blog" class="blog-desc">Why a visual identity system is more-->
+<!--                                        memorable-->
+<!--                                    </a>-->
+<!--                                    <p>Lorem ipsum dolor sit amet consectetur ipsum adipisicing elit.</p>-->
+<!--                                    <div class="d-flex align-items-center justify-content-between mt-lg-4 mt-5">-->
+<!--                                        <h5 class="text-blog-e">March 06, 2021</h5>-->
+<!--                                        <a href="#blog" class="blog-icon-e"><i class="fas fa-plus"></i></a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-lg-6 mt-lg-0 mt-4">-->
+<!--                    <div class="bg-clr-white hover-box">-->
+<!--                        <div class="row align-items-center">-->
+<!--                            <div class="col-sm-6 position-relative">-->
+<!--                                <a href="#blog">-->
+<!--                                    <img class="img-fluid d-block" src="{% static 'assets/images/blog6.jpg' %}" alt="Card image cap">-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-6">-->
+<!--                                <div class="card-body blog-details align-self pl-sm-0">-->
+<!--                                    <a href="#blog" class="blog-desc">Make website that surpasses amongst all-->
+<!--                                        the</a>-->
+<!--                                    <p>Lorem ipsum dolor sit amet consectetur ipsum adipisicing elit.</p>-->
+<!--                                    <div class="d-flex align-items-center justify-content-between mt-lg-4 mt-5">-->
+<!--                                        <h5 class="text-blog-e">March 26, 2021</h5>-->
+<!--                                        <a href="#blog" class="blog-icon-e"><i class="fas fa-plus"></i></a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+    <!-- //blog section -->
+
+    <!-- footer -->
+    <footer class="w3l-footer-22 py-5" id="contact">
+        <div class="container py-md-5 py-4">
+            <div class="row sub-columns">
+                <div class="col-lg-4 col-sm-6 sub-one-left">
+                    <h6>About </h6>
+                    <p>The Quiz Execution application aims at the Employee assessment programs carried out in the organization by conducting Quizzes. The application focuses on creating a well defined exam/quiz for individual departments.
+</p>
+                    <div class="columns-2">
+                        <ul class="social">
+                            <li><a href="#facebook" title="facebook"><span class="fab fa-facebook-f"
+                                        aria-hidden="true"></span></a>
+                            </li>
+                            <li><a href="#linkedin" title="linkedin"><span class="fab fa-linkedin-in"
+                                        aria-hidden="true"></span></a>
+                            </li>
+                            <li><a href="#twitter" title="twitter"><span class="fab fa-twitter"
+                                        aria-hidden="true"></span></a>
+                            </li>
+                            <li><a href="#google" title="google"><span class="fab fa-google-plus-g"
+                                        aria-hidden="true"></span></a>
+                            </li>
+                            <li><a href="#instagram" title="instagram"><span class="fab fa-instagram"
+                                        aria-hidden="true"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-sm-0 mt-5">
+                    <h6>Our Services</h6>
+                    <ul>
+                        <li><span class="fas fa-angle-right mr-2" >Admin penal</span></li>
+                        </li>
+                         <li><span class="fas fa-angle-right mr-2" >Student penal</span></li>
+                        </li>
+                        <li><span class="fas fa-angle-right mr-2" >Teacher penal</span></li>
+                        </li>
+<!--                        <li><a href="services"><span class="fas fa-angle-right mr-2"></span>Photoshop to HTML</a>-->
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-sm-6 sub-two-right mt-lg-0 mt-sm-5 mt-4">
+                    <h6>Quick links</h6>
+                    <ul>
+                        <li><span class="fas fa-angle-right mr-2">Home</span>
+                        <li><span class="fas fa-angle-right mr-2">About</span>
+                        </li>
+                        <li><span class="fas fa-angle-right mr-2">Services</span>
+                        </li>
+                        <li><span class="fas fa-angle-right mr-2">Contact </span>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-lg-0 mt-sm-5 mt-4">
+                    <h6>Help & Support</h6>
+                    <ul>
+                        <li><span class="fas fa-angle-right mr-2">Live Chart</span>
+                               </li>
+                        <li><span class="fas fa-angle-right mr-2">Faq</span>
+                        </li>
+                        <li><span class="fas fa-angle-right mr-2">Support</span>
+                        </li>
+                        <li><span class="fas fa-angle-right mr-2">Terms
+                                of Services </span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sub-contact mt-5 pt-lg-4">
+                <div class="row">
+                    <div class="col-md-4 footer-contact d-flex align-items-center">
+                        <span class="fas fa-envelope-open" aria-hidden="true"></span>
+                        <div>
+                            <a href="mailto:info@example.com">info@example.com</a>
+                            <p>Drop Us a Line</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 footer-contact d-flex align-items-center active">
+                        <span class="fas fa-phone-alt" aria-hidden="true"></span>
+                        <div>
+                            <p>7974037363</p>
+                            <p>Call Us Now</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 footer-contact d-flex align-items-center">
+                        <span class="fas fa-map-marker-alt" aria-hidden="true"></span>
+                        <div>
+                            <h5> Bhopal, Ayothya-Bypass, 460551</h5>
+                            <p>Get Direction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- copyright -->
+        <div class="copyright-footer text-center">
+            <div class="container">
+                <div class="columns">
+                      <div class="footer">
+			<div class="wthree-copyright">
+			  <p> Oct 2022 | Design by <a href="https://www.linkedin.com/in/priyanshu-sisodiya-b724a8213/" target="_blank">Priyanshu Sisodiya</a></p>
+			</div>
+ </div>
+                </div>
+            </div>
+        </div>
+        <!-- //copyright -->
+    </footer>
+    <!-- //footer -->
+
+    <!-- Js scripts -->
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fas fa-level-up-alt" aria-hidden="true"></span>
+    </button>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- //move top -->
+
+    <!-- common jquery plugin -->
+    <script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+    <!-- //common jquery plugin -->
+
+    <!-- owl carousel -->
+    <script src="{% static 'assets/js/owl.carousel.js' %}"></script>
+    <!-- script for tesimonials carousel slider -->
+    <script>
+        $(document).ready(function () {
+            $("#owl-demo2").owlCarousel({
+                loop: true,
+                nav: false,
+                margin: 50,
+                responsiveClass: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 1000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false
+                    },
+                    736: {
+                        items: 1,
+                        nav: false
+                    },
+                    991: {
+                        items: 2,
+                        margin: 30,
+                        nav: false
+                    },
+                    1080: {
+                        items: 3,
+                        nav: false
+                    }
+                }
+            })
+        })
+    </script>
+    <!-- //script for tesimonials carousel slider -->
+    <!-- owl carousel -->
+
+    <!-- magnific popup -->
+    <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+            $('.popup-with-zoom-anim').magnificPopup({
+                type: 'inline',
+
+                fixedContentPos: false,
+                fixedBgPos: true,
+
+                overflowY: 'auto',
+
+                closeBtnInside: true,
+                preloader: false,
+
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-zoom-in'
+            });
+
+            $('.popup-with-move-anim').magnificPopup({
+                type: 'inline',
+
+                fixedContentPos: false,
+                fixedBgPos: true,
+
+                overflowY: 'auto',
+
+                closeBtnInside: true,
+                preloader: false,
+
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-slide-bottom'
+            });
+        });
+    </script>
+    <!-- //magnific popup -->
+
+    <!-- theme switch js (light and dark)-->
+    <script src="{% static 'assets/js/theme-change.js' %}"></script>
+    <script>
+        function autoType(elementClass, typingSpeed) {
+            var thhis = $(elementClass);
+            thhis.css({
+                "position": "relative",
+                "display": "inline-block"
+            });
+            thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+            thhis = thhis.find(".text-js");
+            var text = thhis.text().trim().split('');
+            var amntOfChars = text.length;
+            var newString = "";
+            thhis.text("|");
+            setTimeout(function () {
+                thhis.css("opacity", 1);
+                thhis.prev().removeAttr("style");
+                thhis.text("");
+                for (var i = 0; i < amntOfChars; i++) {
+                    (function (i, char) {
+                        setTimeout(function () {
+                            newString += char;
+                            thhis.text(newString);
+                        }, i * typingSpeed);
+                    })(i + 1, text[i]);
+                }
+            }, 1500);
+        }
+
+        $(document).ready(function () {
+            // Now to start autoTyping just call the autoType function with the
+            // class of outer div
+            // The second paramter is the speed between each letter is typed.
+            autoType(".type-js", 200);
+        });
+    </script>
+    <!-- //theme switch js (light and dark)-->
+
+    <!-- MENU-JS -->
+    <script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+    <!-- //MENU-JS -->
+
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+
+    <!--bootstrap-->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- //bootstrap-->
+    <!-- //Js scripts -->
+
+{% for i in messages %}
+<script>
+    alert('{{i}}');
+</script>
+{% endfor %}
+
+</body>
+
+</html>
